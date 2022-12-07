@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="bg-gray-700 p-4 grid grid-cols-3 grid-rows-1 gap-x-2 gap-y-4">
+           
+    <div class="flex col-span-3 justify-between">
+        <div  class ="bg-gray-500 rounded-lg pr-64 p-16 shadow-xl h-16  col-span-1 flex flex-row items-center justify-center">Logo</div>
+
+        <div class="  p-16 h-16 flex flex-row items-center justify-center gap-4">
+            <button class="bg-gray-500 rounded-lg  p-4 hadow-xl" >Join Us</button>
+            <button class="bg-gray-500 rounded-lg  p-4 shadow-xl">Member Links</button>
+        </div> 
+    </div>
+
+    <div class=" bg-gray-700 underline h-16 text-2xl col-span-3 flex flex-row items-center justify-center">
+            <nav class="flex justify-between p-4">
+              <div class=" flex gap-16">
+                <div>
+                  <a href="#About">
+                    <strong>About</strong>
+                </div>
+                <div>
+                  <a href="#This_Season">
+                    <strong> This Season</strong>
+                </div>
+                <div>
+                  <a href="contacts">
+                    <strong>Contacts</strong>
+                </div>
+              </div>
+            </nav>
+    </div>
+
+</div>
+
+<div class="bg-gray-300 grid grid-cols-3  grid-rows-3">
+        <div class ="col-span-3  flex justify-center">
+            <p class="p-32">image</p>
+        </div>
+</div>
+
+<div class="bg-gray-800 grid grid-cols-3 grid-rows-2 gap-x-2 gap-y-4">
+    <div class ="col-span-3">
+        <p class="col-span-2 p-32 text-5xl"><strong>Send us a message!</strong></p>
+    </div>
+</div>
+
+<div class="bg-gray-300 grid grid-cols-3  grid-rows-2">
+    <div class ="col-span-3  flex justify-center">
+        <p class="p-32">image</p>
+    </div>
+</div>
+
+<div class="bg-gray-800 grid grid-cols-3 min-h-[300px] grid-rows-1 gap-x-2 gap-y-4">
+    <div class ="col-span-3 row-span-2">
+    </div>
+</div>
+
+<div class="p-32 text-xl text-white bg-gray-400 grid grid-cols-3  grid-rows-1 gap-x-2 gap-y-4">
+    <div class ="col-span-1">
+        <div class="span-col-1 pb-4 pt-12 span-row-1 flex justify-center  underline">Support Us </div>
+        <hr>
+        <div class ="span-col-1 pt-12 span-row-2 flex justify-center "><button class=" bg-gray-800 rounded-lg shadow-xl p-2  ">Donate</button> </div>
+    </div>  
+
+    <div class ="col-span-1">
+        <div class="span-col-2 flex justify-center pb-4 pt-12 span-row-1 underline">Quick Links </div>
+        <hr>
+        <div class ="span-col-2 flex justify-center pt-12 span-row-2"> <a href="#About">About</a> </div>
+        <div class ="span-col-2 flex justify-center pt-12 span-row-2"> <a href="#This_Season">This Season</a> </div>
+        <div class ="span-col-2 flex justify-center pt-12 span-row-2"><a href="#Contact">Contact</a></div>
+        
+    </div>  
+
+    <div class ="col-span-1">
+        <div class="span-col-3 flex justify-center pb-4 pt-12 underline span-row-1">Email </div>
+        <hr>
+        <div class ="span-col-3 flex justify-center pt-12 span-row-2"> Mail@southhadleychorale.org </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
