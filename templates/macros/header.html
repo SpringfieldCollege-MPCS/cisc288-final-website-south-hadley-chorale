@@ -12,15 +12,30 @@ text-align: left;
           <span class="sr-only">CISC288</span>
           <img
             class="h-10 w-auto"
-            src="/images/logo.jpeg"
+            src="{{config.base_url}}images/logo.jpeg"
             alt=""
           />
         </a>
 
       </div>
       {# Menu Items #}
+
+
+  
       <div class="hidden space-x-8 lg:block">
-        <a
+
+
+        {% for menu in config.extra.menu_items %}
+          {% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}
+          {% set normal_class = "text-base font-medium text-red-900 hover:text-indigo-50" %}
+          {% set active_class = "text-base font-medium text-red-900 hover:text-indigo-50 underline decoration-red underline-offset-4" %}
+          <a {% if current_url and current_url is starting_with(link_url) %}
+            class="{{active_class}}"
+            {% else %}
+            class="{{ normal_class }}"
+            {% endif %} href="{{ link_url }}">{{ menu.name | upper }}</a>
+        {% endfor %}
+        {# <a
           href="/about"
           class="text-base font-medium text-red-900 hover:text-indigo-50"
           >About</a
@@ -36,7 +51,7 @@ text-align: left;
           href="/contact"
           class="text-base font-medium text-red-900 hover:text-indigo-50"
           >Contacts</a
-        >
+        > #}
 
 
 

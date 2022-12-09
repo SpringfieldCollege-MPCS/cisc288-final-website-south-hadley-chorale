@@ -3,8 +3,8 @@
 {% block content %}
 
 <div>
-
-<img src="https://th.bing.com/th/id/OIP.5lVmwfl3y5Qyi91XdhH95gAAAA?w=243&h=162&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="" width ="100%" height = "1600">
+  {% set image = resize_image(path='images/about_header.jpeg', width=1600, height=450, op="fill") %}
+<img src="{{image.url}}" class="object-cover h-96 w-full">
 <div>
 <div style = "background: #E0CAA0; height:830.98px; " class=" mx-auto pt-10">
     <div class="grid grid-cols-2">
