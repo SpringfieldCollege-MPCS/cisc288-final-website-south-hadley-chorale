@@ -15,28 +15,29 @@
             font-weight: 400;
             line-height: 93px;
             letter-spacing: 0em;
-            text-align: left;" class="col-span-2 p-32 text-5xl"><strong>Send us a message!</strong></p>
+            text-align: left;" class=" font famil col-span-2 p-32 text-5xl"><strong>Send us a message!</strong></p>
         </div>
 
-        <div class="bg-indigo-200 absolute -bottom-12 w-48 ">
+        {% set image = resize_image(path='images/contact_1.png', width=572, height= 200, op="fit") %}
+        <img src="{{image.url}}" class=" object-fill absolute  top-0 right-2 mr-[250px]  mt-[250px]  w-[600px] h-[700px]">
+       
+
+        <div class="bg-[#E0CAA0] h-fill w-1/2 absolute  text-6xl font-family:DM Serif Text p-6 -bottom-96 flex justify center ">
             <p> 
-                Music is heared here <br> ears, understood with the <br> sfsd
+               "Music is heard with the <br> ears, understood with the <br> mind and felt with the heart"
             </p>
         </div>
 </div>
 
-<div>
-    <img src="https://th.bing.com/th/id/OIP.g8o4GoLLMnPsX-nO4jtakwHaFX?w=239&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"  style= "width:100%">
+
+
+<div class = "bg-[#251E15] h-[800px] text-white">
 
 </div>
 
 
 
 
-<div style =" height:300px; background: #241E15;" class=" w-full  ">
-    <div class ="col-span-3 row-span-2"></div>
-{# <div style ="background: #251E15;" class=" grid grid-cols-3 min-h-[300px] grid-rows-1 "> #}
-{# <div class ="col-span-3 row-span-2"></div> #}
-</div>
+
 </section>
 {% endblock content %}

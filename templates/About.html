@@ -3,71 +3,103 @@
 {% block content %}
 
 <div>
+  <div class = "relative">
   {% set image = resize_image(path='images/about_header.jpeg', width=1600, height=450, op="fill") %}
-<img src="{{image.url}}" class="object-cover h-96 w-full">
-<div>
-<div style = "background: #E0CAA0; height:830.98px; " class=" mx-auto pt-10">
-    <div class="grid grid-cols-2">
-      <img  class = "p-16" src="https://via.placeholder.com/777x524" alt="">
-      <div class="flex flex-row justify-center items-center p-4 ">
-        <div class="grid grid-cols-1">
-          <div class="flex flex-row justify-left items-center p-4 text-4xl " style ="font-family: Kaisei Opti;
-          font-size: 96px;
-          font-weight: 400;
-          line-height: 139px;
-          letter-spacing: 0em;
-          text-align: left;
-          ">Our History</div>
-          <div style="font-family: Kaisei Opti;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 29px;
-          letter-spacing: 0em;
-          text-align: left;
-          " class="flex flex-row justify-left items-center p-4 w-3/5">The South Hadley Chorale was founded in 1984
-            as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
-            founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
-            each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
-            more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
-            Valley communities.</div>
+  <img src="{{image.url}}" class="object-cover h-[733px] w-full">
+
+</div>
+
+
+<div  class="bg-[#251E15] h-[800px] mx-auto relative">
+      <div class=" absolute -top-64 p-16  w-[700px] ml-32 bg-[#E0CAA0] h-fill">
+        <div class=" pb-10 text-7xl font-family:DM Serif Text flex justify-center  ">
+          Our History
+        </div>
+        <div class=" text-4xl  font-family:DM Serif Text">
+          The South Hadley Chorale was founded in 1984
+          as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
+          founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
+          each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
+          more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
+          Valley communities.
+        </div>
+    </div>
+ 
+    <div class = "span-col-2">
+        {% set image = resize_image(path='images/about_1.png', width=750, height=600, op="fit") %}
+        <img src="{{image.url}}" class="object-fit  flex p-4 absolute  -right-4 -bottom-20 ">
+    </div>
+</div>
+
+
+
+
+
+
+
+  <div  style =" height:1869px;" class = "pt-32 bg-white">
+    <div class="container mx-auto pt-10">
+      <div class="grid grid-row-2 h-[1800px]">
+
+      <div class = "flex flex-row span-row-1 justify-between ">
+        <div class = " relative">
+          {% set image = resize_image(path='images/Conductor.png', width=572, height=565, op="fit") %}
+          <img src="{{image.url}}" class="mt-[100px]  ml-[150px] object-fill w-full">
+          <div class  = "bg-black h-12 bg-[#866841] absolute top-20 w-[600px]">
+          </div>
+        </div>
+        <div  class="mt-[100px] mr-[100px] ml-[855] w-[564px] h-[565px] flex flex-col">
+          <h1 class=" flex justify-center font-mainFont text-5xl ">Conductor</h1>
+          <p class =" p-6 text-3xl font-family:Alegreya Sans w-[564px] ">Alexandra Ludwig maintains an active life as a conductor, professor, and performer. In addition to leading the South Hadley Chorale, she is an Associate Professor of Music and the chair of the Visual and Performing Arts department at Springfield College. Her position has included not only teaching, but also accompanying for the dance department and conducting the Springfield College Community Chorus. Other musical paths include playing in an old-time band on both accordion and bass, singing with countless groups including past membership in Illuminati Vocal Arts Ensemble and Novi Cantori, and collaborating with dancer Sarah Zehnder of ZehnderDance.org as a composer.</p>
         </div>
       </div>
-    </div>
+        
 
-  </div>
-
-
-
-  <div  style ="background: #251E15; height:1869px;">
-    <h1 style = "padding-left: 200px; padding-top:50px; font-family:Kaisei Opti;" class ="inline-block text-5xl text-white"> Board of Directors </h1>
-      <div class="container mx-auto pt-10">
-    <div class="grid grid-cols-2 ">
-
-      <div class = "pt-10 p-16"><img src="https://th.bing.com/th/id/OIP.enMA8pWTA7_knhRtaFkL6QHaHj?w=142&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="" height = "658.95" width = "1597"></div>
-      <div style="background: #E7DECF;" class="flex flex-col">
-        <h1 class=" flex justify-center text-5xl ">Accompianist</h1>
-        <p></p>
+      <div class = "flex items-center m-6 border-8 border-black flex flex-row justify-between ">
+        <div  class="ml-[150px] flex flex-col w-[564px]">
+          <h1 class=" flex justify-center font-family:Alegreya Sans text-5xl ">Acompianist</h1>
+          <p class =" p-6 text-3xl font-family:Alegreya Sans ">Michael Rheault is a pianist, accompanist, teacher, music director and composer. He accompanies and teaches piano at Springfield College, is Director of Music at Our Lady of Mount Carmel Church, and has music directed scores of musicals, from Guys and Dolls to Hair. As a composer, his most recent musical, Fabulous!, ran Off-Broadway for several months and is now available for licensing through Stage Rights and Broadway Licensing.</p>
+        </div>
+      <div>
+          {% set image = resize_image(path='images/Accompianist.png', width=1600, height=565, op="fit") %}
+          <img src="{{image.url}}" class= "p-6   object-fill mr-32">
       </div>
-
-      <div style = "width:605.13px; height:814.3px; background: #E7DECF;"      class="flex p-2 flex-col relative">
-        <h2 class=" flex justify-center text-5xl">Conductor</h2>
-        <p style = "font-family: Kaisei Opti;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 35px;
-        letter-spacing: 0em;
-        text-align: left;"
-        class ="p-4 text-">Alexandra Ludwig maintains an active life as a conductor, professor, and performer. In addition to leading the South Hadley Chorale, she is an Associate Professor of Music and the chair of the Visual and Performing Arts department at Springfield College. Her position has included not only teaching, but also accompanying for the dance department and conducting the Springfield College Community Chorus. Other musical paths include playing in an old-time band on both accordion and bass, singing with countless groups including past membership in Illuminati Vocal Arts Ensemble and Novi Cantori, and collaborating with dancer Sarah Zehnder of ZehnderDance.org as a composer.</p>     </div>
-      <div class = "pt-10 p-16"><img src="https://th.bing.com/th/id/OIP.enMA8pWTA7_knhRtaFkL6QHaHj?w=142&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="" height = "605.16" width = "572"></div>
-
-
-
-    </div>
-
-
+      </div>
+      
 
 
   </div>
+</div>
+
+
+
+
+</div>
+
+
+<div class = "grid grid-rows-2 pt-64 pb-32 bg-white">
+  
+  <div class="flex  flex-row span-row-1 relative">
+  <h1 class ="inline-block w-full ml-[300px] text-5xl">Board Of Directors </h1>
+  <div class  = "bg-black h-12 bg-[#866841] absolute -bottom-20 w-[600px]">
   </div>
+</div>
+
+  <br>
+  <div class = "flex flex-col justify-center span-row-2 ml-[150px] mr-[150px] text-3xl" style = "height:800px">
+  
+  <p class ="">  Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist.
+
+  <br>
+  <br>
+    Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
+<br>
+<br>
+    You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.</p>
+  </p>
+</div>
+</div>
+
+
 
 {% endblock content %}

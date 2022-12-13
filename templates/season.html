@@ -2,6 +2,75 @@
 
 {% block content %}
 
+<div class = "mx-auto relative ">
+{% set image = resize_image(path='images/season header.png', width=572, height= 200, op="fit") %}
+<img src="{{image.url}}" class=" object-fill w-full h-[700px]">
+</div>
+
+
+
+<div class ="bg-[#251E15] h-[700px] relative">
+    <div class=" absolute -top-[100px] p-16  w-1/2 ml-32 bg-[#E0CAA0] h-[500px]">
+        <div class=" font-bold pb-10 text-7xl font-family:DM Serif Text flex justify-center  ">
+          <h1>2022-23 Season </h1>
+        </div>
+        <div class=" text-4xl  font-family:DM Serif Text">
+            The major work for the 2022-2023 season will be Joseph Haydn's "Lord Nelson Mass (Mass No. 11 in D minor)"
+        </div>
+    </div>
+    {% set image = resize_image(path='images/season_pianist.png', width=572, height= 300, op="fit") %}
+    <img src="{{image.url}}" class=" object-fill absolute pt-[200px] bottom-32 left-[850px] w-[580px] h-[610px]">
+
+
+
+</div>
+
+<div class = "relative">
+{% set image = resize_image(path='images/season_land.png', width=572, height= 300, op="fit") %}
+<img src="{{image.url}}" class=" object-fill  w-full h-[610px]">
+<div class=" absolute -top-[100px] p-16  w-fit ml-[172px] bg-[#F3F0EA] h-fit  rounded-md">
+    <div class="  font-medium text-4xl font-family:DM Serif Text flex justify-center  ">
+    <button> Upcoming <br> events <button>
+    </div>
+</div>
+</div>
+
+<div class = " bg-[#251E15] h-[1600px] relative">
+    
+    {% set image = resize_image(path='images/season_church.png', width=572, height= 300, op="fit") %}
+    <img src="{{image.url}}" class=" object-fill absolute pt-[200px] bottom-32 left-[212px] top-[416px] w-[917x] h-[1093px]">
+
+    <div class=" absolute -top-[100px] p-16  w-[978px] right-0 bg-[#E0CAA0] h-[879px]">
+        <div class=" font-bold pb-10 text-7xl font-family:DM Serif Text justify-center  ">
+           <h1> Rhearsals Info </h1>
+        </div>
+        <div class=" text-4xl  font-family:Alegreya Sans">
+        <p>  Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist.
+            <br>
+            <br>
+            Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
+            <br>
+            <br>
+            You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
+            <br>
+            <br>
+        </p>
+</div>
+    </div>
+</div>
+
+<div class = " grid grid-cols-3 p-12 text-4xl text-white bg-[#251E15] h-[600px]">
+    <div class = "flex flex-row justify-center items-center span-col-1">
+    <button class = "border-8  h-[288px] w-[467px] rounded-lg p-12"> Ticket Information </button>
+    </div>
+    <div class = " flex flex-row justify-center  items-center span-col-2">
+        <button class = " border-8 h-[288px] w-[459px] rounded-lg p-12"> Parking </button>
+    </div>
+    <div class = "flex  flex-row  justify-center items-center span-col-3">
+        <button class = "border-8 h-[288px] w-[491px] rounded-lg p-12">FAQ</button>
+    </div>
+</div>
+
 
 
 {% endblock content %}
