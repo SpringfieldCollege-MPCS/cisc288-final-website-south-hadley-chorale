@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./templates/**/*.html", "./theme/**/*.html",  "./themes/"],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        'mainFont': ['Kaisei Opti', 'sans-serif']
+      }
+    }
   },
   variants: {},
   plugins: [
