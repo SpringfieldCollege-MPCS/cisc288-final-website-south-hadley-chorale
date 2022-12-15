@@ -5,27 +5,33 @@
 {% set image = resize_image(path='images/donate_header.png', width=1600, height= 200, op="fit") %}
 <img src="{{image.url}}" class=" w-full object-fit ">
 
-<div class="relative bg-[#251E15] h-[600px]">
-    <div class="absolute w-3/4 h-96  p-4 -top-10 bg-[#E0CAA0] ">
-      <div class=" p-6  sm:text-3xl lg:text-5xl font-family:DM Serif Text flex justify-center ">
-        <h1>Our History <h1>
-      </div>
-      
-      <div class=" flex flex-col min-h-full sm:text-sm lg:text-base  font-family:DM Serif Text">
+<div class="relative bg-second_color-0 h-[600px]">
+    <div class="absolute w-3/4 h-96  p-4 -top-10 bg-[#E0CAA0]  flex flex-col min-h-fit sm:text-2xl md:2xl  items-center lg:text-3xl  font-family:DM Serif Text">
         <p>
-        The South Hadley Chorale was founded in 1984
-        as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
-        founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
-        each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
-        more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
-        Valley communities.
+          The South Hadley Chorale receives the majority of its funding from the support of individual patrons and local businesses and from our ticket sales. We also receive some funding from the Massachusetts Cultural Council.
         </p>
-      </div>
-  
     </div>
 
-<div>
-<button> Donate Here at Patreon </button>
+    <div class = " bg-gray-50 rounded-md absolute flex justify-center items-center bottom-20 left-1/4  p-4">
+      <a href="" class = "lg:text-5xl md:text3xl   sm:text-2xl flex flex-col"> Donate Here! <br> (Link to Patreon) </a>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 mx-auto grid-row-2 pt-10">
+  <div><h1 class = "flex row-span-1 justify-center text-4xl font-family:DM Serif Text"> Donation Levels </h1></div>
+  <div class = "px-32 pt-10">
+  <div class = "abolute row-span-1 flex justify-center h-6 bg-[#866841]">
+  </div> 
+</div>
+
+
+<div class = "p-4">
+<div class="grid grid-cols-6 mx-auto gap-4 p-10 ">
+  <div class=" border border-black h-32  col-span-2 flex flex-col items-center p-10">Conductor’s Circle <br>  [$500+]</div>
+  <div class=" border border-black col-span-2 flex flex-col items-center p-10">Underwriters <br> [$200-$499]</div>
+  <div class=" border border-black col-span-2 flex flex-col items-center p-10">Benefactors <br> [$100-199]</div>
+  <div class=" border border-black col-span-2 flex flex-col items-center p-10">Patrons [$75-99]</div>
+  <div class=" border border-black col-span-2 flex flex-col items-center p-10">Friends [$50-74]</div>
 </div>
 </div>
 {% endblock content %}

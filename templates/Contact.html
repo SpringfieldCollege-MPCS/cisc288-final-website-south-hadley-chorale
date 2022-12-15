@@ -2,27 +2,21 @@
 
 {% block content %}
 
-<section>
+
 <div>
-    <img  class="h-96 w-full object-cover" src="{{config.base_url}}images/contact_header.jpeg" alt="">
+    {% set image = resize_image(path='images/contact_header.jpeg', width=572, height= 200, op="fit") %}
+    <img src="{{image.url}}" class=" object-fill w-full flex">
 </div>
 
 
-<div style ="background: #251E15;" class=" grid grid-cols-3 grid-rows-2 gap-x-2 gap-y-4 relative">
-        <div class ="col-span-3">
-            <p style ="color: #E0CAA0; font-family: Kaisei Opti;
-            font-size: 64px;
-            font-weight: 400;
-            line-height: 93px;
-            letter-spacing: 0em;
-            text-align: left;" class=" font famil col-span-2 p-32 text-5xl"><strong>Send us a message!</strong></p>
-        </div>
+<div style ="background: #251E15;" class=" grid grid-cols-1 gap-x-2 gap-y-4 relative">
+            <p class=" col-span-1 flex flex-row font-mainFont text-donate_color p-32 text-2xl"><strong>Send us a message at our Email!</strong></p>
+            
+            {% set image = resize_image(path='images/contact_1.png', width=572, height= 200, op="fit") %}
+            <img src="{{image.url}}" class=" object-fill flex justify-center">
 
-        {% set image = resize_image(path='images/contact_1.png', width=572, height= 200, op="fit") %}
-        <img src="{{image.url}}" class=" object-fill absolute  top-0 right-2 mr-[250px]  mt-[250px]  w-[600px] h-[700px]">
-       
 
-        <div class="bg-[#E0CAA0] h-fill w-1/2 absolute  text-6xl font-family:DM Serif Text p-6 -bottom-96 flex justify center ">
+        <div class="bg-[#E0CAA0] h-fill w-1/2 absolute  text-4xl font-family:DM Serif Text p-6 -bottom-96 flex justify center ">
             <p> 
                "Music is heard with the <br> ears, understood with the <br> mind and felt with the heart"
             </p>
@@ -31,13 +25,26 @@
 
 
 
+
+
 <div class = "bg-[#251E15] h-[800px] text-white">
 
 </div>
 
+<div class = " bg-[#251E15] flex items-center pb-10  justify-center ">
+<div class = "bg-[#E0CAA0] w-2/3 p-10 border border-black rounded-md ">
+        <div class=" font-bold pb-10 text-7xl font-family:DM Serif Text flex justify-center  ">
+           <h1> Requirements  </h1>
+        </div>
+        <div class=" text-4xl  font-family:Alegreya Sans">
+        <p> Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
+
+            You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
+        </p>
+        </div>
+</div>
+</div>
 
 
 
-
-</section>
 {% endblock content %}
