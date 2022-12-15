@@ -1,15 +1,12 @@
 {% macro header() %}
 <header>
-  <nav class="flex bg-[#E0CAA0] flex-row justify-between items-center h-24 px-4 text-3xl font-mainFont" aria-label="Top">
+  <nav class="flex bg-[#E0CAA0] flex-row justify-between items-center h-24 px-4 text-sm font-mainFont" aria-label="Top">
       {# Logo #}
-      <div class="flex items-center">
+      <div class="flex  items-center">
         <a href="/">
           <span class="sr-only">CISC288</span>
-          <img
-            class="h-10 w-auto"
-            src="{{config.base_url}}images/logo.jpeg"
-            alt=""
-          />
+          {% set image = resize_image(path='images/logo.jpeg', width=256, height=96, op="fit") %}
+          <img src="{{image.url}}" class=" object-fit p-4">
         </a>
 
       </div>
@@ -17,12 +14,12 @@
 
 
   
-      <div class="hidden space-x-8 lg:block">
+      <div class="  sm:flex flex-col lg:block sm:space-x-2 lg:space-x-8 ">
 
 
         {% for menu in config.extra.menu_items %}
           {% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}
-          {% set normal_class = "text-base font-medium text-red-900 hover:text-indigo-50" %}
+          {% set normal_class = " text-xs sm:text-sm lg:text-xl font-sm text-red-900 hover:text-indigo-50" %}
           {% set active_class = "text-base font-medium text-red-900 hover:text-indigo-50 underline decoration-red underline-offset-4" %}
           <a {% if current_url and current_url is starting_with(link_url) %}
             class="{{active_class}}"
@@ -32,8 +29,7 @@
         {% endfor %}
         {# <a
           href="/about"
-          class="text-base font-medium text-red-900 hover:text-indigo-50"
-          >About</a
+          class="text-base font-medium text-red-900 hover:text-indigo-50">About</a
         >
 
         <a
@@ -59,16 +55,12 @@
           >Join</a
         > -->
         <a style = "background: #440000;"
-          href="#"
+          href="/contact"
           class="inline-block rounded-full border border-transparent text-white py-4 px-4 text-base font-medium hover:bg-indigo-50"
           >Join</a
         >
 
-        <a style = "background: #251E15;        "
-        href="#"
-        class="inline-block rounded-md border border-transparent text-white  py-2 px-4 text-base font-medium hover:bg-indigo-50"
-        >Member Links</a
-      >
+
       </div>
  
 

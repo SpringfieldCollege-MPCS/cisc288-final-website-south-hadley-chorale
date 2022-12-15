@@ -19,5 +19,5 @@ highlight_code = true
 menu_items = [
     {name = "About", url = "/about"},
     {name = "This Season", url = "/season"},
-    {name = "Contact", url = "/contact"}
+    {name = "Contact", url = "/contact"},
 ]

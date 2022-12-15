@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% set image = resize_image(path='images/donate_header.png', width=1600, height= 200, op="fit") %}
+<img src="{{image.url}}" class=" w-full object-fit ">
+
+<div class="relative bg-[#251E15] h-[600px]">
+    <div class="absolute w-3/4 h-96  p-4 -top-10 bg-[#E0CAA0] ">
+      <div class=" p-6  sm:text-3xl lg:text-5xl font-family:DM Serif Text flex justify-center ">
+        <h1>Our History <h1>
+      </div>
+      
+      <div class=" flex flex-col min-h-full sm:text-sm lg:text-base  font-family:DM Serif Text">
+        <p>
+        The South Hadley Chorale was founded in 1984
+        as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
+        founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
+        each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
+        more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
+        Valley communities.
+        </p>
+      </div>
+  
+    </div>
+
+<div>
+<button> Donate Here at Patreon </button>
+</div>
+</div>
+{% endblock content %}
