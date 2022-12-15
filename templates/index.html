@@ -1,84 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section>
+<section class="bg-[#251E15] pb-8">
   <div class="bg-slate-200 h-96">
     <img src="{{config.base_url}}images/home_top.jpeg" class="object-cover w-full h-96" alt="">
-
-
   </div>
-
-
-
-  <div class ="bg-[#251E15] h-[700px] relative">
-    <div class=" absolute -top-[100px] p-16  w-1/2 bg-[#E0CAA0] h-[600px]">
+  <div class ="bg-[#251E15]">
+    <div class="p-16  w-full  bg-[#E0CAA0]">
         <div class=" font-bold pb-10 text-7xl font-family:DM Serif Text flex justify-center  ">
           <h1>Welcome! </h1>
         </div>
         <div class=" text-4xl  font-family:DM Serif Text">
             
 The South Hadley Chorale’s mission is to promote choral music in the Pioneer Valley by providing singers of all ages with the opportunity to sing and perform choral repertoire that emphasizes the Baroque, Classical, and Romantic periods while also considering more recent works.
-
-
-
-
         </div>
     </div>
     
-
-
   </div>
 
-  <div class ="bg-[#251E15] h-[700px] relative">
-    {% set image = resize_image(path='images/season_pianist.png', width=572, height= 300, op="fit") %}
-    <img src="{{image.url}}" class=" object-fill absolute pt-[200px] bottom-64 left-[150px] w-[580px] h-[610px]">
-
-    <div class=" absolute -right-[50px] p-16s  w-1/2 ml-32 bg-[#E0CAA0] h-[700px]">
-        <div class=" font-bold pb-10 text-7xl font-family:DM Serif Text flex justify-center  ">
-          <h1>Recent News </h1>
-        </div>
-        <div class=" text-4xl  font-family:DM Serif Text">
-          Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist. Our dues for the 2022-2023 season are $75.00 which includes the cost of music. You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
-        </div>
+  <div class="mt-12 mx-8 grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-[#251E15]">
+    {% set image = resize_image(path='images/homepage_mid.jpg', width=1165, height= 874, op="fit") %}
+    <img src="{{image.url}}" class="object-fill">
+    <div class="bg-[#E0CAA0]">
+      <div class=" font-bold pb-10 text-6xl font-family:DM Serif Text flex justify-center  ">
+        <h1>Recent News </h1>
+      </div>
+      <div class=" text-2xl px-12 pb-6  font-family:DM Serif Text">
+        Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist. Our dues for the 2022-2023 season are $75.00 which includes the cost of music. You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
+      </div>
     </div>
-    
-
-    
-   
-
-
-</div>
-
-
-
-<div class="bg-[#251E15]">
-  <div class=" flex justify-center mx-auto pt-20">
-
- 
-  <div class="flex flex-col items-center p-16  w-1/2 bg-[#E0CAA0] h-fit ">
-    <h1 class=" font-bold pb-10 text-7xl font-family:DM Serif Text flex justify-center ">Future Uploads</h1>
-    <div class=" text-4xl  font-family:DM Serif Text">
-    Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist. Our dues for the 2022-2023 season are $75.00 which includes the cost of music. You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
-    </div>
-  </div>
-
-    
-
 
   </div>
 
-</div>
 
-
-
-
-
-
-       
-
-
-
-  </div>
+  <div class="bg-[#E0CAA0] flex flex-col justify-center w-full lg:w-10/12 mx-auto my-8">
+      <h1 class=" font-bold pb-10 text-7xl font-family:DM Serif Text flex justify-center items-center">Future Uploads</h1>
+      <div class=" text-2xl  font-family:DM Serif Text px-12 pb-6">
+      Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist. Our dues for the 2022-2023 season are $75.00 which includes the cost of music. You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
+      </div>
   </div>
 </section>
 {% endblock content %}
