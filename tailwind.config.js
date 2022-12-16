@@ -16,7 +16,7 @@ module.exports = {
         "donate_color" : ['#D78928', '#D78928'],
         "hadley_gold" : ['#E0CAA0', '#E0CAA0'],
         "second_color" : ['#251E15', '#251E15'],
-        "second_color" : ['#8F4B4B', '#8F4B4B']
+        "join_color" : ['#8F4B4B', '#8F4B4B']
       }
     }
   },
