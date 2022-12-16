@@ -9,34 +9,31 @@
 </div>
 
 
-<div style ="background: #251E15;" class=" grid grid-cols-1 gap-x-2 gap-y-4 relative">
-            <p class=" col-span-1 flex flex-row font-mainFont text-donate_color p-32 text-2xl"><strong>Send us a message at our Email!</strong></p>
-            
-            {% set image = resize_image(path='images/contact_1.png', width=572, height= 200, op="fit") %}
-            <img src="{{image.url}}" class=" object-fill flex justify-center">
+<div class=" bg-[#251E15] grid grid-cols-1 gap-x-2 gap-y-2">
+            <div class=" col-span-1 flex flex-col font-mainFont text-donate_color p-16 text-2xl">
+                <p><strong>Send us a message at our Email!</strong></p>
+            </div>
 
+            <div class = "col-span-1 flex flex-col items-center">
+            {% set image = resize_image(path='images/contact_1.png', width=400, height= 800, op="fit") %}
+            <img src="{{image.url}}" class=" object-fill rounded-md ">
+            </div>
 
-        <div class="bg-[#E0CAA0] h-fill w-1/2 absolute  text-4xl font-family:DM Serif Text p-6 -bottom-96 flex justify center ">
-            <p> 
-               "Music is heard with the <br> ears, understood with the <br> mind and felt with the heart"
-            </p>
-        </div>
+            <div class="bg-[#E0CAA0] h-fill w-fit  rounded-md text-2xl font-family:DM Serif Text p-6 -bottom-96 flex justify center ">
+                <p> 
+                "Music is heard with the <br> ears, understood with the <br> mind and felt with the heart"
+                </p>
+            </div>
 </div>
 
 
 
-
-
-<div class = "bg-[#251E15] h-[800px] text-white">
-
-</div>
-
-<div class = " bg-[#251E15] flex items-center pb-10  justify-center ">
+<div class = " bg-[#251E15] pt-10 flex items-center pb-10  justify-center ">
 <div class = "bg-[#E0CAA0] w-2/3 p-10 border border-black rounded-md ">
-        <div class=" font-bold pb-10 text-7xl font-family:DM Serif Text flex justify-center  ">
+        <div class=" font-bold pb-10 text-4xl font-family:DM Serif Text flex justify-center  ">
            <h1> Requirements  </h1>
         </div>
-        <div class=" text-4xl  font-family:Alegreya Sans">
+        <div class=" text-xl  font-family:Alegreya Sans">
         <p> Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
 
             You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.

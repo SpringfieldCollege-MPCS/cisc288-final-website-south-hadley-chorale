@@ -1,22 +1,23 @@
 {% macro header() %}
 <header>
   <nav class="flex bg-[#E0CAA0] flex-row justify-between items-center h-24 px-4 text-sm font-mainFont" aria-label="Top">
-      {# Logo #}
-      <div class="flex  items-center">
-        <a href="/">
+      
+    
+    <div class="flex  items-center">
+        
+      <a href="/">
           <span class="sr-only">CISC288</span>
           {% set image = resize_image(path='images/shclogo.png', width=256, height=96, op="fit") %}
           <img src="{{image.url}}" class=" object-fit p-4">
-        </a>
+      </a>
 
-      </div>
+    </div>
       {# Menu Items #}
 
-
+      
   
-      <div class="  sm:flex flex-col lg:block sm:space-x-2 lg:space-x-8 ">
-
-
+      <div class=" hidden flex-col lg:block space-x-8">
+        
         {% for menu in config.extra.menu_items %}
           {% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}
           {% set normal_class = " text-xs sm:text-sm lg:text-xl font-sm text-red-900 hover:text-indigo-50" %}
@@ -27,43 +28,43 @@
             class="{{ normal_class }}"
             {% endif %} href="{{ link_url }}">{{ menu.name | upper }}</a>
         {% endfor %}
-        {# <a
+        {#
+          <ul>
+            <li>
+          <a
           href="/about"
           class="text-base font-medium text-red-900 hover:text-indigo-50">About</a
         >
+            </li >
 
+
+        <li> 
         <a
           href="/season"
           class="text-base font-medium text-red-900 hover:text-indigo-50"
           >This Season</a
         >
+        </li> 
 
         <a
           href="/contact"
           class="text-base font-medium text-red-900 hover:text-indigo-50"
           >Contacts</a
         > #}
-
-
-
       </div>
+
       {# Buttons #}
       <div class="">
-        <!-- <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-slate-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
-          >Join</a
-        > -->
         <a style = "background: #440000;"
           href="/contact"
           class="inline-block rounded-full border border-transparent text-white py-4 px-4 text-base font-medium hover:bg-indigo-50"
           >Join</a
         >
-
-
       </div>
- 
+      <div>
 
+      <i class="fas fa-bars fa-2x visible mr-10 md:mr-0 text-blue-200 bg-black cursor-pointer"></i>
+      </div>
   </nav>
 </header>
 

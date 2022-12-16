@@ -20,4 +20,5 @@ menu_items = [
     {name = "About", url = "/about"},
     {name = "This Season", url = "/season"},
     {name = "Contact", url = "/contact"},
+    {name = "", url = "/donate"}
 ]

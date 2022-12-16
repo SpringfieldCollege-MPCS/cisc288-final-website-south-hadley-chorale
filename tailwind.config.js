@@ -4,14 +4,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'mainFont': ['Kaisei Opti', 'sans-serif'],
-        'secondFont': ['Inter', 'sans-serif']
+        'Kaisei': ['Kaisei Opti', 'sans-serif'],
+        'Inter': ['Inter', 'sans-serif'],
+        'Alegreya': ['Alegreya Sans', 'sans-serif'],
+        'DM': ['DM Serif TEXT', 'sans-serif']
+        
+
       },
 
       colors:{
         "donate_color" : ['#D78928', '#D78928'],
-        "header_footer" : ['#E0CAA0', '#D78928'],
-        "second_color" : ['#251E15', '#D78928'],
+        "hadley_gold" : ['#E0CAA0', '#E0CAA0'],
+        "second_color" : ['#251E15', '#251E15'],
+        "second_color" : ['#8F4B4B', '#8F4B4B']
       }
     }
   },
