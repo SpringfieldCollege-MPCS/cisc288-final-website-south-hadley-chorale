@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=DM+Serif+Text&family=Inter&family=Kaisei+Opti&display=swap');
+
+
 @tailwind base;
 
 @tailwind components;
