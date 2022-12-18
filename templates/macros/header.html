@@ -5,7 +5,7 @@
   <nav class="flex bg-hadley_gold flex-row justify-between items-center h-24 px-4 text-sm font-mainFont" aria-label="Top">
     <div class="flex  items-center">
         
-      <a href="/" class="p-4">
+      <a href="{{config.base_url}}/" class="p-4">
           <span class="sr-only">South Hadley Chorale</span>
           {% set image = resize_image(path='images/shclogo.png', width=256, height=96, op="fit") %}
           <img height="48" src="{{image.url}}" class="object-fit">
@@ -29,7 +29,7 @@
 
       <div class="hidden md:block">
         <a
-          href="/contact"
+          href="{{config.base_url}}/contact"
           class="bg-join_color inline-block rounded-full border border-transparent text-white text-lg md:text-2xl px-4 py-2 text-base font-medium hover:bg-red-900"
           >Join</a>
       </div>
