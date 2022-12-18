@@ -4,8 +4,8 @@
 
 
 <div>
-    {% set image = resize_image(path='images/contact_header.jpeg', width=572, height= 200, op="fit") %}
-    <img src="{{image.url}}" class=" object-fill w-full flex">
+    {% set image = resize_image(path='images/contact_header.jpeg', height=700, op="fit_height") %}
+    <img src="{{image.url}}" class="object-contain w-full h-auto">
 </div>
 
 
