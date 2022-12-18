@@ -4,98 +4,208 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/images//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/images/favicon-16x16.png">
   <title>South Hadley Chorale</title>
   <link rel="stylesheet" href="https://springfieldcollege-mpcs.github.io/cisc288-final-website-south-hadley-chorale/styles/style.css">
+  <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body class="bg-[#F3F0EA]">
 
 
-    <div class="container mx-auto px-2">
+    <div class="container mx-auto px-4">
 
   
     
-<header style ="
-font-weight: 700;
-line-height: 46px;
-letter-spacing: 0em;
-text-align: left;
- ">
-  <nav class="flex bg-[#E0CAA0] flex-row justify-between items-center h-24 px-4 text-3xl font-mainFont" aria-label="Top">
-      
-      <div class="flex items-center">
-        <a href="/">
-          <span class="sr-only">CISC288</span>
-          <img
-            class="h-10 w-auto"
-            src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;images/logo.jpeg"
-            alt=""
-          />
-        </a>
+<header x-data="{
+  open: false
+}" >
+  <nav class="flex bg-hadley_gold flex-row justify-between items-center h-24 px-4 text-sm font-mainFont" aria-label="Top">
+    <div class="flex  items-center">
+        
+      <a href="/" class="p-4">
+          <span class="sr-only">South Hadley Chorale</span>
+          
+          <img height="48" src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;bcdabe1672e47c8600.png" class="object-fit">
+      </a>
+    </div>
 
-      </div>
-      
-
-
-  
-      <div class="hidden space-x-8 lg:block">
-
-
+      <div class=" hidden md:block flex-col space-x-4 lg:space-x-8 ">
+        
         
           
           
           
           <a 
-            class="text-base font-medium text-red-900 hover:text-indigo-50"
+            class=" font-mainFont text-lg md:text-2xl font-sm text-red-900 hover:text-indigo-50"
              href="&#x2F;about">ABOUT</a>
         
           
           
           
           <a 
-            class="text-base font-medium text-red-900 hover:text-indigo-50"
+            class=" font-mainFont text-lg md:text-2xl font-sm text-red-900 hover:text-indigo-50"
              href="&#x2F;season">THIS SEASON</a>
         
           
           
           
           <a 
-            class="text-base font-medium text-red-900 hover:text-indigo-50"
+            class=" font-mainFont text-lg md:text-2xl font-sm text-red-900 hover:text-indigo-50"
              href="&#x2F;contact">CONTACT</a>
         
-        
 
+      </div>
 
-
+      <div class="hidden md:block">
+        <a
+          href="/contact"
+          class="bg-join_color inline-block rounded-full border border-transparent text-white text-lg md:text-2xl px-4 py-2 text-base font-medium hover:bg-red-900"
+          >Join</a>
       </div>
       
-      <div class="">
-        <!-- <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-slate-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
-          >Join</a
-        > -->
-        <a style = "background: #440000;"
-          href="#"
-          class="inline-block rounded-full border border-transparent text-white py-4 px-4 text-base font-medium hover:bg-indigo-50"
-          >Join</a
-        >
-
-        <a style = "background: #251E15;        "
-        href="#"
-        class="inline-block rounded-md border border-transparent text-white  py-2 px-4 text-base font-medium hover:bg-indigo-50"
-        >Member Links</a
-      >
+      <div @click="open = !open; console.log(open)" class="md:hidden cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
       </div>
- 
 
-  </nav>
+      </nav>
+
+    <div x-cloak x-show="open" class="fixed left-0 top-0 w-screen h-fit border  border-black p-10 z-20 bg-hadley_gold">
+      <div class="flex flex-col border-2 border-black rounded-md p-4 justify-center items-center space-y-4">
+
+        <div @click="open = false" class="text-2xl cursor-pointer text-red-900 hover:text-white">X</div>
+        
+          
+          
+          
+          <a 
+            class="text-lg  text-red-900 hover:white"
+             href="&#x2F;about">ABOUT</a>
+        
+          
+          
+          
+          <a 
+            class="text-lg  text-red-900 hover:white"
+             href="&#x2F;season">THIS SEASON</a>
+        
+          
+          
+          
+          <a 
+            class="text-lg  text-red-900 hover:white"
+             href="&#x2F;contact">CONTACT</a>
+        
+
+      </div>
+    </div>
 </header>
 
 
   
       
 
+<div class = "mx-auto relative ">
+
+<img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;8cf3bf51cb168cf600.jpg" class="object-scale-down w-full h-auto">
+</div>
+
+
+
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-second_color">
+    <div class="bg-hadley_gold m-8">
+      <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
+        <h1> 2022-23 season <h1>
+      </div>
+      <div class=" text-2xl px-12 pb-6  font-DM">
+        <p>
+          The major work for the 2022-2023 season will be Joseph Haydn's "Lord Nelson Mass (Mass No. 11 in D minor)"</p>    
+        </div>
+    </div>
+    
+    <img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;16ca4e7f3a7765e700.png" class="object-fill m-12">
+  </div>
+
+<div class = "relative">
+
+<img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;c4dba5c765887c6e00.png" class=" object-fill  w-full h-[610px]">
+<div class=" absolute -top-[100px] p-16  w-fit ml-[172px] bg-[#F3F0EA] h-fit  rounded-md">
+    <div class="  font-medium text-4xl font-DM flex justify-center  ">
+    <button> Upcoming <br> events <button>
+    </div>
+</div>
+</div>
+
+
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-[#251E15]">
+    <div class="bg-hadley_gold m-8">
+      <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
+        <h1> Rhearsals Info </h1>
+      </div>
+      <div class=" text-2xl px-12 pb-6  font-DM">
+        <p>  Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist.
+            <br>
+            <br>
+            Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
+            <br>
+            <br>
+            You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
+            <br>
+            <br>
+        </p>  
+        </div>
+    </div>
+    
+    <img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;cdea5d385205aed000.png" class="object-fill m-12">
+  </div>
+
+
+<div class = " grid grid-cols-1 lg:grid-cols-3 p-12 gap-4 text-base text-white bg-[#251E15] h-fill">
+    <div class = "border-8 rounded-lg  flex flex-col items-center span-col-1 p-2">
+        <h1 class="text-2xl font-DM"> 
+        Ticket Information
+        </h1>
+        <p class = "font-Kaisei">
+        <u>General admission:</u><br>
+        $20 at door <br> $16 pre-sale<br>
+
+        <u>Seniors:</u><br>
+        $16 at door <br> $12 Pre-sale<br>
+
+        <u>Children</u><br>
+        $5 all times
+        </p>
+    </div>
+
+    <div class = "border-8  rounded-lg flex flex-col items-center span-col-1">
+        <h1 class="text-2xl font-DM"> 
+            Parking
+        </h1>
+        <p class = "font-Kaisei">
+            Please refer to Mount <br>
+            Holyoke College parking<br>
+            <u>For information:</u><br>
+            https://offices.mtholyoke.edu/
+            <br>parking/visitors
+        </p>
+    </div>
+
+    <div class = "border-8 rounded-lg  flex flex-col  items-center span-col-1">
+        <h1 class="text-2xl font-DM"> 
+        FAQS
+        </h1>
+        <p class ="font-Kaisei">
+            <u>Please email us at:</u><br>
+            Mail@SouthHadley.org
+        </p>
+    </div>
+
+</div>
+
 
 
 
@@ -104,36 +214,45 @@ text-align: left;
     
       
 
-<footer>
 
-    <div style ="background: #E0CAA0; font-family: Inter;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
-    "    class="p-32 text-xl text-white  grid grid-cols-3  grid-rows-1 gap-x-2 gap-y-4">
-        <div class ="col-span-1">
-            <div class="span-col-1 pb-4 pt-12 span-row-1 flex justify-center  underline">Support Us </div>
-            <hr>
-            <div class ="span-col-1 pt-12 span-row-2 flex justify-center "><button style =" color:black;background: #D78928;"                class=" bg-gray-800 rounded-lg shadow-xl p-2  ">Donate</button> </div>
-        </div>  
-    
-        <div class ="col-span-1">
-            <div class="span-col-2 flex justify-center pb-4 pt-12 span-row-1 underline">Quick Links </div>
-            <hr>
-            <div class ="span-col-2 flex justify-center pt-12 span-row-2"> <a href="#About">About</a> </div>
-            <div class ="span-col-2 flex justify-center pt-12 span-row-2"> <a href="#This_Season">This Season</a> </div>
-            <div class ="span-col-2 flex justify-center pt-12 span-row-2"><a href="#Contact">Contact</a></div>
-            
-        </div>  
-    
-        <div class ="col-span-1">
-            <div class="span-col-3 flex justify-center pb-4 pt-12 underline span-row-1">Email </div>
-            <hr>
-            <div class ="span-col-3 flex justify-center pt-12 span-row-2"> Mail@southhadleychorale.org </div>
+
+<footer class=" bg-hadley_gold font-secondFont p-10 text-xl text-red-900 flex justify-center">
+
+    <div class=" w-full grid  grid-cols-1 md:grid-cols-3  gap-x-8 gap-y-4 justify-between">
+        <div class="col-span-1 flex flex-col space-y-2">
+
+            <div class="span-col-1 flex justify-center  span-row-1">
+                <u>Support Us</u>
+            </div>
+            <div class="span-col-1 flex  justify-center span-row-2 text-white">
+                <a href="/donate" class=" bg-second_color rounded-lg shadow-xl p-2  hover:text-white  ">
+                    Donate
+                </a>
+            </div>
         </div>
-    
+
+
+
+        <div class="col-span-1 flex flex-col">
+
+            <div class="span-col-2 flex justify-center  span-row-1 underline">
+                <u>Quick Links</u>
+            </div>
+            <div class="span-col-2 flex justify-center pt-4 md:pt-12 span-row-2"> <a class="hover:text-white"
+                    href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/about">About</a> </div>
+            <div class="span-col-2 flex justify-center pt-4 md:pt-12 span-row-2"> <a class="hover:text-white"
+                    href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/season">This Season</a> </div>
+            <div class="span-col-2 flex justify-center pt-4 md:pt-12 span-row-2"><a class="hover:text-white"
+                    href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/contact">Contact</a></div>
+        </div>
+
+        <div class="col-span-1 flex flex-col p-2">
+            <div class="span-col-3 flex justify-center  underline span-row-1">Email </div>
+
+            <div class="span-col-3 flex justify-center items-center pt-4 md:pt-12 span-row-2 ">
+                Mail@southha<br>dleychorale.org </div>
+        </div>
+
     </div>
 </footer>
 

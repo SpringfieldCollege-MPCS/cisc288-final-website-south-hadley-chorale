@@ -4,167 +4,202 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/images//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/images/favicon-16x16.png">
   <title>South Hadley Chorale</title>
   <link rel="stylesheet" href="https://springfieldcollege-mpcs.github.io/cisc288-final-website-south-hadley-chorale/styles/style.css">
+  <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body class="bg-[#F3F0EA]">
 
 
-    <div class="container mx-auto px-2">
+    <div class="container mx-auto px-4">
 
   
     
-<header style ="
-font-weight: 700;
-line-height: 46px;
-letter-spacing: 0em;
-text-align: left;
- ">
-  <nav class="flex bg-[#E0CAA0] flex-row justify-between items-center h-24 px-4 text-3xl font-mainFont" aria-label="Top">
-      
-      <div class="flex items-center">
-        <a href="/">
-          <span class="sr-only">CISC288</span>
-          <img
-            class="h-10 w-auto"
-            src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;images/logo.jpeg"
-            alt=""
-          />
-        </a>
+<header x-data="{
+  open: false
+}" >
+  <nav class="flex bg-hadley_gold flex-row justify-between items-center h-24 px-4 text-sm font-mainFont" aria-label="Top">
+    <div class="flex  items-center">
+        
+      <a href="/" class="p-4">
+          <span class="sr-only">South Hadley Chorale</span>
+          
+          <img height="48" src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;bcdabe1672e47c8600.png" class="object-fit">
+      </a>
+    </div>
 
-      </div>
-      
-
-
-  
-      <div class="hidden space-x-8 lg:block">
-
-
+      <div class=" hidden md:block flex-col space-x-4 lg:space-x-8 ">
+        
         
           
           
           
           <a 
-            class="text-base font-medium text-red-900 hover:text-indigo-50"
+            class=" font-mainFont text-lg md:text-2xl font-sm text-red-900 hover:text-indigo-50"
              href="&#x2F;about">ABOUT</a>
         
           
           
           
           <a 
-            class="text-base font-medium text-red-900 hover:text-indigo-50"
+            class=" font-mainFont text-lg md:text-2xl font-sm text-red-900 hover:text-indigo-50"
              href="&#x2F;season">THIS SEASON</a>
         
           
           
           
           <a 
-            class="text-base font-medium text-red-900 hover:text-indigo-50"
+            class=" font-mainFont text-lg md:text-2xl font-sm text-red-900 hover:text-indigo-50"
              href="&#x2F;contact">CONTACT</a>
         
-        
 
+      </div>
 
-
+      <div class="hidden md:block">
+        <a
+          href="/contact"
+          class="bg-join_color inline-block rounded-full border border-transparent text-white text-lg md:text-2xl px-4 py-2 text-base font-medium hover:bg-red-900"
+          >Join</a>
       </div>
       
-      <div class="">
-        <!-- <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-slate-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
-          >Join</a
-        > -->
-        <a style = "background: #440000;"
-          href="#"
-          class="inline-block rounded-full border border-transparent text-white py-4 px-4 text-base font-medium hover:bg-indigo-50"
-          >Join</a
-        >
-
-        <a style = "background: #251E15;        "
-        href="#"
-        class="inline-block rounded-md border border-transparent text-white  py-2 px-4 text-base font-medium hover:bg-indigo-50"
-        >Member Links</a
-      >
+      <div @click="open = !open; console.log(open)" class="md:hidden cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
       </div>
- 
 
-  </nav>
+      </nav>
+
+    <div x-cloak x-show="open" class="fixed left-0 top-0 w-screen h-fit border  border-black p-10 z-20 bg-hadley_gold">
+      <div class="flex flex-col border-2 border-black rounded-md p-4 justify-center items-center space-y-4">
+
+        <div @click="open = false" class="text-2xl cursor-pointer text-red-900 hover:text-white">X</div>
+        
+          
+          
+          
+          <a 
+            class="text-lg  text-red-900 hover:white"
+             href="&#x2F;about">ABOUT</a>
+        
+          
+          
+          
+          <a 
+            class="text-lg  text-red-900 hover:white"
+             href="&#x2F;season">THIS SEASON</a>
+        
+          
+          
+          
+          <a 
+            class="text-lg  text-red-900 hover:white"
+             href="&#x2F;contact">CONTACT</a>
+        
+
+      </div>
+    </div>
 </header>
 
 
   
       
 
+<section class="bg-white">
+
+
+
 <div>
   
-<img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;0740b671d200410500.jpg" class="object-cover h-96 w-full">
-<div>
-<div style = "background: #E0CAA0; height:830.98px; " class=" mx-auto pt-10">
-    <div class="grid grid-cols-2">
-      <img  class = "p-16" src="https://via.placeholder.com/777x524" alt="">
-      <div class="flex flex-row justify-center items-center p-4 ">
-        <div class="grid grid-cols-1">
-          <div class="flex flex-row justify-left items-center p-4 text-4xl " style ="font-family: Kaisei Opti;
-          font-size: 96px;
-          font-weight: 400;
-          line-height: 139px;
-          letter-spacing: 0em;
-          text-align: left;
-          ">Our History</div>
-          <div style="font-family: Kaisei Opti;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 29px;
-          letter-spacing: 0em;
-          text-align: left;
-          " class="flex flex-row justify-left items-center p-4 w-3/5">The South Hadley Chorale was founded in 1984
-            as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
-            founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
-            each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
-            more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
-            Valley communities.</div>
+  <img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;6d43499a45281b9700.jpg">
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2">
+  <div class="bg-hadley_gold m-8">
+    <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
+      <h1> Our History <h1>
+    </div>
+    <div class=" text-2xl px-12 pb-6 font-mainFont ">
+      <p>
+        The South Hadley Chorale was founded in 1984
+        as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
+        founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
+        each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
+        more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
+        Valley communities.
+        </p>    
+      </div>
+  </div>
+  
+  <img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;16ca4e7f3a7765e700.png" class="object-fill m-12">
+</div>
+
+
+
+
+
+
+<div class = "pt-32 bg-white p-4 ">
+  <div class = "pb-10">
+      <div class="grid  sm:grid-cols-1 lg:grid-cols-2 gap-y-4">
+
+        <div class="relative">
+          
+          <img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;0ff4bbf7733cdd5000.png" class="object-fill w-4/6 mx-auto">
+          <div class  = "h-2 sm:h-4 lg:h-4 bg-hadley_gold absolute -top-12 sm:-top-14 lg:-top-16 w-3/5 my-10 -ml-4"></div>
+        </div>
+
+        <div  class="flex flex-col justify-center items-center">
+          <h1 class=" flex justify-center font-mainFont text-5xl ">Conductor</h1>
+          <p class =" p-6 text-2xl font-mainFont ">Alexandra Ludwig maintains an active life as a conductor, professor, and performer. In addition to leading the South Hadley Chorale, she is an Associate Professor of Music and the chair of the Visual and Performing Arts department at Springfield College. Her position has included not only teaching, but also accompanying for the dance department and conducting the Springfield College Community Chorus. Other musical paths include playing in an old-time band on both accordion and bass, singing with countless groups including past membership in Illuminati Vocal Arts Ensemble and Novi Cantori, and collaborating with dancer Sarah Zehnder of ZehnderDance.org as a composer.</p>
         </div>
       </div>
     </div>
 
-  </div>
-
-
-
-  <div  style ="background: #251E15; height:1869px;"  class="">
-    <h1 class ="text-3xl text-white"> Board of Directors </h1>
-      <div class="container mx-auto pt-10">
-    <div class="grid grid-cols-2 ">
-
-      <div class = "pt-10 p-16"><img src="https://th.bing.com/th/id/OIP.enMA8pWTA7_knhRtaFkL6QHaHj?w=142&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="" height = "658.95" width = "1597"></div>
-      <div style="background: #E7DECF;" class="flex flex-col">
-        <h1 class=" flex justify-center text-5xl ">Accompianist</h1>
-        <p></p>
+    <div>
+      <div class="grid sm:grid-cols-1 pt-10  lg:grid-cols-2 gap-y-4 border border-black">
+          <div  class="p-6 flex flex-col justify-center items-center">
+                <h1 class=" flex justify-center font-mainFont text-5xl ">Acompianist</h1>
+                <p class =" p-6 text-2xl font-mainFont ">Michael Rheault is a pianist, accompanist, teacher, music director and composer. He accompanies and teaches piano at Springfield College, is Director of Music at Our Lady of Mount Carmel Church, and has music directed scores of musicals, from Guys and Dolls to Hair. As a composer, his most recent musical, Fabulous!, ran Off-Broadway for several months and is now available for licensing through Stage Rights and Broadway Licensing.</p>
+          </div>
+  
+          <div  class=" p-6 flex flex-col justify-center items-center">
+              
+              <img src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale&#x2F;processed_images&#x2F;dcc6892629b81e4e00.png" class= "p-6   object-fill">
+          </div>
       </div>
-
-      <div style = "width:605.13px; height:814.3px; background: #E7DECF;"      class="flex p-2 flex-col relative">
-        <h2 class=" flex justify-center text-5xl">Conductor</h2>
-        <p style = "font-family: Kaisei Opti;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 35px;
-        letter-spacing: 0em;
-        text-align: left;"
-        class ="p-4 text-">Alexandra Ludwig maintains an active life as a conductor, professor, and performer. In addition to leading the South Hadley Chorale, she is an Associate Professor of Music and the chair of the Visual and Performing Arts department at Springfield College. Her position has included not only teaching, but also accompanying for the dance department and conducting the Springfield College Community Chorus. Other musical paths include playing in an old-time band on both accordion and bass, singing with countless groups including past membership in Illuminati Vocal Arts Ensemble and Novi Cantori, and collaborating with dancer Sarah Zehnder of ZehnderDance.org as a composer.</p>     </div>
-      <div class = "pt-10 p-16"><img src="https://th.bing.com/th/id/OIP.enMA8pWTA7_knhRtaFkL6QHaHj?w=142&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="" height = "605.16" width = "572"></div>
-        <div>
-          <a 
-        </div>
-
-
     </div>
+</div>
 
 
-
-
+<div class = "flex flex-row bg-white relative">
+    <h1 class ="w-full pl-4 text-3xl md:text-3xl lg:text-5xl font-DM">Board Of Directors </h1>
+    <div class  = "h-2 sm:h-4 lg:h-4 bg-hadley_gold absolute -bottom-12 sm:-bottom-14 lg:-bottom-16 w-3/5 my-10"></div>
   </div>
-  </div>
+
+
+
+<div class = "flex flex-col justify-center span-row-2 items-center text-base mt-4 p-6 md:p-15 lg:p-20">
+  
+  <p class ="text-2xl font-mainFont">  
+    Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist.
+
+    <br>
+    <br>
+      Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
+    <br>
+    <br>
+      You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.</p>
+  </p>
+</div>
+
+</section>
+
+
 
 
 
@@ -172,36 +207,45 @@ text-align: left;
     
       
 
-<footer>
 
-    <div style ="background: #E0CAA0; font-family: Inter;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
-    "    class="p-32 text-xl text-white  grid grid-cols-3  grid-rows-1 gap-x-2 gap-y-4">
-        <div class ="col-span-1">
-            <div class="span-col-1 pb-4 pt-12 span-row-1 flex justify-center  underline">Support Us </div>
-            <hr>
-            <div class ="span-col-1 pt-12 span-row-2 flex justify-center "><button style =" color:black;background: #D78928;"                class=" bg-gray-800 rounded-lg shadow-xl p-2  ">Donate</button> </div>
-        </div>  
-    
-        <div class ="col-span-1">
-            <div class="span-col-2 flex justify-center pb-4 pt-12 span-row-1 underline">Quick Links </div>
-            <hr>
-            <div class ="span-col-2 flex justify-center pt-12 span-row-2"> <a href="#About">About</a> </div>
-            <div class ="span-col-2 flex justify-center pt-12 span-row-2"> <a href="#This_Season">This Season</a> </div>
-            <div class ="span-col-2 flex justify-center pt-12 span-row-2"><a href="#Contact">Contact</a></div>
-            
-        </div>  
-    
-        <div class ="col-span-1">
-            <div class="span-col-3 flex justify-center pb-4 pt-12 underline span-row-1">Email </div>
-            <hr>
-            <div class ="span-col-3 flex justify-center pt-12 span-row-2"> Mail@southhadleychorale.org </div>
+
+<footer class=" bg-hadley_gold font-secondFont p-10 text-xl text-red-900 flex justify-center">
+
+    <div class=" w-full grid  grid-cols-1 md:grid-cols-3  gap-x-8 gap-y-4 justify-between">
+        <div class="col-span-1 flex flex-col space-y-2">
+
+            <div class="span-col-1 flex justify-center  span-row-1">
+                <u>Support Us</u>
+            </div>
+            <div class="span-col-1 flex  justify-center span-row-2 text-white">
+                <a href="/donate" class=" bg-second_color rounded-lg shadow-xl p-2  hover:text-white  ">
+                    Donate
+                </a>
+            </div>
         </div>
-    
+
+
+
+        <div class="col-span-1 flex flex-col">
+
+            <div class="span-col-2 flex justify-center  span-row-1 underline">
+                <u>Quick Links</u>
+            </div>
+            <div class="span-col-2 flex justify-center pt-4 md:pt-12 span-row-2"> <a class="hover:text-white"
+                    href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/about">About</a> </div>
+            <div class="span-col-2 flex justify-center pt-4 md:pt-12 span-row-2"> <a class="hover:text-white"
+                    href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/season">This Season</a> </div>
+            <div class="span-col-2 flex justify-center pt-4 md:pt-12 span-row-2"><a class="hover:text-white"
+                    href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-south-hadley-chorale/contact">Contact</a></div>
+        </div>
+
+        <div class="col-span-1 flex flex-col p-2">
+            <div class="span-col-3 flex justify-center  underline span-row-1">Email </div>
+
+            <div class="span-col-3 flex justify-center items-center pt-4 md:pt-12 span-row-2 ">
+                Mail@southha<br>dleychorale.org </div>
+        </div>
+
     </div>
 </footer>
 
