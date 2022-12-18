@@ -3,26 +3,20 @@
 {% block content %}
 
 <div class = "mx-auto relative ">
-{% set image = resize_image(path='images/season header.png', width=572, height= 200, op="fit") %}
-<img src="{{image.url}}" class=" object-fill w-full h-[700px]">
+{% set image = resize_image(path='images/season header.png', width=1000, height= 700, op="fit") %}
+<img src="{{image.url}}" class=" object-fit w-full h-[700] md:h-[700px]">
 </div>
 
 
 
-<div class="bg-[] grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-[#251E15]">
-    <div class="bg-[#E0CAA0] m-8">
-      <div class=" font-bold py-4text-6xl font-family:DM Serif Text flex justify-center  ">
-        <h1> Our History <h1>
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-second_color">
+    <div class="bg-hadley_gold m-8">
+      <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
+        <h1> 2022-23 season <h1>
       </div>
-      <div class=" text-2xl px-12 pb-6  font-family:DM Serif Text">
+      <div class=" text-2xl px-12 pb-6  font-DM">
         <p>
-          The South Hadley Chorale was founded in 1984
-          as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
-          founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
-          each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
-          more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
-          Valley communities.
-          </p>    
+          The major work for the 2022-2023 season will be Joseph Haydn's "Lord Nelson Mass (Mass No. 11 in D minor)"</p>    
         </div>
     </div>
     {% set image = resize_image(path='images/about_1.png', width=1165, height= 874, op="fit") %}
@@ -33,19 +27,19 @@
 {% set image = resize_image(path='images/season_land.png', width=572, height= 300, op="fit") %}
 <img src="{{image.url}}" class=" object-fill  w-full h-[610px]">
 <div class=" absolute -top-[100px] p-16  w-fit ml-[172px] bg-[#F3F0EA] h-fit  rounded-md">
-    <div class="  font-medium text-4xl font-family:DM Serif Text flex justify-center  ">
+    <div class="  font-medium text-4xl font-DM flex justify-center  ">
     <button> Upcoming <br> events <button>
     </div>
 </div>
 </div>
 
 
-<div class="bg-[] grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-[#251E15]">
-    <div class="bg-[#E0CAA0] m-8">
-      <div class=" font-bold py-4text-6xl font-family:DM Serif Text flex justify-center  ">
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-[#251E15]">
+    <div class="bg-hadley_gold m-8">
+      <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
         <h1> Rhearsals Info </h1>
       </div>
-      <div class=" text-2xl px-12 pb-6  font-family:DM Serif Text">
+      <div class=" text-2xl px-12 pb-6  font-DM">
         <p>  Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist.
             <br>
             <br>
@@ -65,26 +59,26 @@
 
 <div class = " grid grid-cols-1 lg:grid-cols-3 p-12 gap-4 text-base text-white bg-[#251E15] h-fill">
     <div class = "border-8 rounded-lg  flex flex-col items-center span-col-1">
-        <h1 class="text-2xl"> 
+        <h1 class="text-2xl font-DM"> 
         Ticket Information
         </h1>
-        <p>
+        <p class = "font-Kaisei">
         <u>General admission:</u><br>
-        $20 at door, $16 pre-sale<br>
+        $20 at door <br> $16 pre-sale<br>
 
         <u>Seniors:</u><br>
-        $16 at door, $12 Pre-sale<br>
+        $16 at door <br> $12 Pre-sale<br>
 
-        <u>>/children</u><br>
+        <u>Children</u><br>
         $5 all times
         </p>
     </div>
 
     <div class = "border-8  rounded-lg flex flex-col items-center span-col-1">
-        <h1 class="text-2xl"> 
+        <h1 class="text-2xl font-DM"> 
             Parking
         </h1>
-        <p>
+        <p class = "font-Kaisei">
             Please refer to Mount <br>
             Holyoke College parking<br>
             <u>For information:</u><br>
@@ -94,10 +88,10 @@
     </div>
 
     <div class = "border-8 rounded-lg  flex flex-col  items-center span-col-1">
-        <h1 class="text-2xl"> 
+        <h1 class="text-2xl font-DM"> 
         FAQS
         </h1>
-        <p>
+        <p class ="font-Kaisei">
             <u>Please email us at:</u><br>
             Mail@SouthHadley.org
         </p>

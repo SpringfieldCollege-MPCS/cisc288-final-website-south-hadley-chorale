@@ -2,7 +2,7 @@
 <header x-data="{
   open: false
 }" >
-  <nav class="flex bg-[#E0CAA0] flex-row justify-between items-center h-24 px-4 text-sm font-mainFont" aria-label="Top">
+  <nav class="flex bg-hadley_gold flex-row justify-between items-center h-24 px-4 text-sm font-mainFont" aria-label="Top">
     <div class="flex  items-center">
         
       <a href="/">
@@ -16,7 +16,7 @@
         
         {% for menu in config.extra.menu_items %}
           {% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}
-          {% set normal_class = " text-xs sm:text-sm lg:text-xl font-sm text-red-900 hover:text-indigo-50" %}
+          {% set normal_class = " font-mainFont text-xs sm:text-sm lg:text-xl font-sm text-red-900 hover:text-indigo-50" %}
           {% set active_class = "text-base font-medium text-red-900 hover:text-indigo-50 underline decoration-red underline-offset-4" %}
           <a {% if current_url and current_url is starting_with(link_url) %}
             class="{{active_class}}"
@@ -28,9 +28,9 @@
       </div>
 
       <div class="hidden md:block">
-        <a style = "background: #440000;"
+        <a
           href="/contact"
-          class="inline-block rounded-full border border-transparent text-white py-4 px-4 text-base font-medium hover:bg-indigo-50"
+          class="bg-join_color inline-block rounded-full border border-transparent text-white px-4 py-2 text-base font-medium hover:bg-indigo-50"
           >Join</a>
       </div>
       
@@ -42,8 +42,8 @@
 
       </nav>
 
-    <div x-show="open" class="fixed left-0 top-0 w-screen h-screen z-20 bg-white">
-      <div class="flex flex-col justify-center items-center space-y-4">
+    <div x-show="open" class="fixed left-0 top-0 w-screen h-fit border  border-black p-10 z-20 bg-hadley_gold">
+      <div class="flex flex-col border-2 border-black rounded-md p-4 justify-center items-center space-y-4">
 
         <div @click="open = false">X</div>
         {% for menu in config.extra.menu_items %}
