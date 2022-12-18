@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class = "mx-auto relative ">
+{% set image = resize_image(path='images/season_header.jpg', height=700, op="fit_height") %}
+<img src="{{image.url}}" class="object-scale-down w-full h-auto">
+</div>
+
+
+
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-second_color">
+    <div class="bg-hadley_gold m-8">
+      <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
+        <h1> 2022-23 season <h1>
+      </div>
+      <div class=" text-2xl px-12 pb-6  font-DM">
+        <p>
+          The major work for the 2022-2023 season will be Joseph Haydn's "Lord Nelson Mass (Mass No. 11 in D minor)"</p>    
+        </div>
+    </div>
+    {% set image = resize_image(path='images/about_1.png', width=1165, height= 874, op="fit") %}
+    <img src="{{image.url}}" class="object-fill m-12">
+  </div>
+
+<div class = "relative">
+{% set image = resize_image(path='images/season_land.png', width=572, height= 300, op="fit") %}
+<img src="{{image.url}}" class=" object-fill  w-full h-[610px]">
+<div class=" absolute -top-[100px] p-16  w-fit ml-[172px] bg-[#F3F0EA] h-fit  rounded-md">
+    <div class="  font-medium text-4xl font-DM flex justify-center  ">
+    <button> Upcoming <br> events <button>
+    </div>
+</div>
+</div>
+
+
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2 bg-[#251E15]">
+    <div class="bg-hadley_gold m-8">
+      <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
+        <h1> Rhearsals Info </h1>
+      </div>
+      <div class=" text-2xl px-12 pb-6  font-DM">
+        <p>  Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist.
+            <br>
+            <br>
+            Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
+            <br>
+            <br>
+            You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.
+            <br>
+            <br>
+        </p>  
+        </div>
+    </div>
+    {% set image = resize_image(path='images/season_church.png', width=1165, height= 874, op="fit") %}
+    <img src="{{image.url}}" class="object-fill m-12">
+  </div>
+
+
+<div class = " grid grid-cols-1 lg:grid-cols-3 p-12 gap-4 text-base text-white bg-[#251E15] h-fill">
+    <div class = "border-8 rounded-lg  flex flex-col items-center span-col-1 p-2">
+        <h1 class="text-2xl font-DM"> 
+        Ticket Information
+        </h1>
+        <p class = "font-Kaisei">
+        <u>General admission:</u><br>
+        $20 at door <br> $16 pre-sale<br>
+
+        <u>Seniors:</u><br>
+        $16 at door <br> $12 Pre-sale<br>
+
+        <u>Children</u><br>
+        $5 all times
+        </p>
+    </div>
+
+    <div class = "border-8  rounded-lg flex flex-col items-center span-col-1">
+        <h1 class="text-2xl font-DM"> 
+            Parking
+        </h1>
+        <p class = "font-Kaisei">
+            Please refer to Mount <br>
+            Holyoke College parking<br>
+            <u>For information:</u><br>
+            https://offices.mtholyoke.edu/
+            <br>parking/visitors
+        </p>
+    </div>
+
+    <div class = "border-8 rounded-lg  flex flex-col  items-center span-col-1">
+        <h1 class="text-2xl font-DM"> 
+        FAQS
+        </h1>
+        <p class ="font-Kaisei">
+            <u>Please email us at:</u><br>
+            Mail@SouthHadley.org
+        </p>
+    </div>
+
+</div>
+
+
+
+{% endblock content %}

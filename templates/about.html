@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="bg-white">
+
+
+
+<div>
+  {% set image = resize_image(path='images/about_header.jpeg', width=1600, height=800, op="fit") %}
+  <img src="{{image.url}}">
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-2">
+  <div class="bg-hadley_gold m-8">
+    <div class=" font-bold py-4 text-4xl font-DM flex justify-center  ">
+      <h1> Our History <h1>
+    </div>
+    <div class=" text-2xl px-12 pb-6 font-mainFont ">
+      <p>
+        The South Hadley Chorale was founded in 1984
+        as the South Hadley Community Chorus to celebrate Bach's 300th anniversary. Under the direction of the
+        founder, Dr. Barbara Conant, Bach's Mass in B minor was performed in the inaugural year. we now reheare
+        each year in October and, in March, perform with orchestra and soloists a concert consisting of one or
+        more classical masterworks. Our members are drawn from South Hadly, Massachusetts and surrounding Pioneer
+        Valley communities.
+        </p>    
+      </div>
+  </div>
+  {% set image = resize_image(path='images/about_1.png', width=1165, height= 874, op="fit") %}
+  <img src="{{image.url}}" class="object-fill m-12">
+</div>
+
+
+
+
+
+
+<div class = "pt-32 bg-white p-4 ">
+  <div class = "pb-10">
+      <div class="grid  sm:grid-cols-1 lg:grid-cols-2 gap-y-4">
+
+        <div class="relative">
+          {% set image = resize_image(path='images/Conductor.png', width=572, height=565, op="fit") %}
+          <img src="{{image.url}}" class="object-fill w-4/6 mx-auto">
+          <div class  = "h-2 sm:h-4 lg:h-4 bg-hadley_gold absolute -top-12 sm:-top-14 lg:-top-16 w-3/5 my-10 -ml-4"></div>
+        </div>
+
+        <div  class="flex flex-col justify-center items-center">
+          <h1 class=" flex justify-center font-mainFont text-5xl ">Conductor</h1>
+          <p class =" p-6 text-2xl font-mainFont ">Alexandra Ludwig maintains an active life as a conductor, professor, and performer. In addition to leading the South Hadley Chorale, she is an Associate Professor of Music and the chair of the Visual and Performing Arts department at Springfield College. Her position has included not only teaching, but also accompanying for the dance department and conducting the Springfield College Community Chorus. Other musical paths include playing in an old-time band on both accordion and bass, singing with countless groups including past membership in Illuminati Vocal Arts Ensemble and Novi Cantori, and collaborating with dancer Sarah Zehnder of ZehnderDance.org as a composer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="grid sm:grid-cols-1 pt-10  lg:grid-cols-2 gap-y-4 border border-black">
+          <div  class="p-6 flex flex-col justify-center items-center">
+                <h1 class=" flex justify-center font-mainFont text-5xl ">Acompianist</h1>
+                <p class =" p-6 text-2xl font-mainFont ">Michael Rheault is a pianist, accompanist, teacher, music director and composer. He accompanies and teaches piano at Springfield College, is Director of Music at Our Lady of Mount Carmel Church, and has music directed scores of musicals, from Guys and Dolls to Hair. As a composer, his most recent musical, Fabulous!, ran Off-Broadway for several months and is now available for licensing through Stage Rights and Broadway Licensing.</p>
+          </div>
+  
+          <div  class=" p-6 flex flex-col justify-center items-center">
+              {% set image = resize_image(path='images/Accompianist.png', width=1600, height=565, op="fit") %}
+              <img src="{{image.url}}" class= "p-6   object-fill">
+          </div>
+      </div>
+    </div>
+</div>
+
+
+<div class = "flex flex-row bg-white relative">
+    <h1 class ="w-full pl-4 text-3xl md:text-3xl lg:text-5xl font-DM">Board Of Directors </h1>
+    <div class  = "h-2 sm:h-4 lg:h-4 bg-hadley_gold absolute -bottom-12 sm:-bottom-14 lg:-bottom-16 w-3/5 my-10"></div>
+  </div>
+
+
+
+<div class = "flex flex-col justify-center span-row-2 items-center text-base mt-4 p-6 md:p-15 lg:p-20">
+  
+  <p class ="text-2xl font-mainFont">  
+    Rehearsals for the 2022-2023 program year will start on Wednesday, October 12, 2022 at 7 P.M. at All-Saints Episcopal Church, 7 Woodbridge St, South Hadley with Alexandra Ludwig, our outstanding Music Director who is returning for her 5th year. Michael Rheault will also be returning as our accompanist.
+
+    <br>
+    <br>
+      Our dues for the 2022-2023 season are $75.00 which includes the cost of music.
+    <br>
+    <br>
+      You must bring proof of vaccination including the booster shot (unless not yet eligible-less than 6 months since 2nd shot). Masks must be worn at all times during rehearsal.</p>
+  </p>
+</div>
+
+</section>
+
+
+
+{% endblock content %}

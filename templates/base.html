@@ -1,25 +1,41 @@
 {% import 'macros/header.html' as macros_header -%}
+{% import 'macros/footer.html' as macros_footer -%}
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{config.base_url}}/images//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{config.base_url}}/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{config.base_url}}/images/favicon-16x16.png">
+  <title>South Hadley Chorale</title>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
+  <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body>
+<body class="bg-[#F3F0EA]">
+
+
+    <div class="container mx-auto px-4">
 
   {% block header %}
     {{ macros_header::header() }}
   {% endblock header %}
-
-  <section>
-    <div class="container mx-auto max-w-7xl p-8">
       {% block content %} {% endblock %}
+
+
+    {% block footer %}
+      {{ macros_footer::footer() }}
+    {% endblock footer %}
     </div>
-  </section>
+ 
+   
+
+
 </body>
+
+
 
 </html>
